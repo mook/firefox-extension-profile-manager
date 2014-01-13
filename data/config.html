@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Profile Manager Configuration</title>
+</head>
+<body>
+    <ul id="profiles">
+        <li data-id="item-name">
+            <img src="resource://profileman-at-mook-dot-github-dot-io/profileman/data/images/user-silhouette.png">
+            Item Description
+        </li>
+    </ul>
+</body>
+<script src="lib/jquery-1.10.2.js"></script>
+<script src="lib/jquery-ui.js"></script>
+<script>
+    $(()=> {
+       $("#profiles").selectable({filter: "li"});
+    });
+</script>
+<style type="text/css">
+    @import url(lib/jquery-ui.css);
+    :root {
+        height: 100%;
+    }
+    body {
+        display: flex;
+        height: calc(100% - 2ex);
+        margin: 1ex;
+    }
+    #profiles {
+        flex: 1 0 auto;
+        padding: 0;
+    }
+    #profiles > li {
+        list-style: none;
+    }
+    #profiles .ui-selected {
+        background-color: Highlight;
+        color: HighlightText;
+    }
+</style>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "profileman",
+  "title": "Profile Manager",
+  "id": "profileman@mook.github.io",
+  "description": "Profile management for your Mozilla application",
+  "author": "Mook",
+  "license": "MPL 1.1",
+  "version": "0.0.0.20140108",
+  "dependencies": ["subprocess"],
+  "permissions": {"private-browsing": true}
+}

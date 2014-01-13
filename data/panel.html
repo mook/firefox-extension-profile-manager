@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Profile Manager Popup Panel</title>
+</head>
+<body>
+    <menu id="profiles" type="popup"></menu>
+    <!--
+        Items look like:
+        <li data-id="item-name">
+            <img src="image-source">
+            Item Description
+        </li>
+    -->
+    <button id="config-button">
+        <img src="images/gear.png">
+        Configure profiles
+    </button>
+</body>
+<style type="text/css">
+    * {
+        -moz-user-input: disabled;
+        -moz-user-select: -moz-none;
+        cursor: default;
+    }
+    :root {
+        height: 100%;
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+        height: calc(100% - 2ex);
+        margin: 1ex;
+    }
+    #profiles {
+        flex: 1 0 auto;
+        padding: 0;
+    }
+    #profiles:empty::before {
+        content: "No profiles are configured";
+        color: red;
+    }
+    #profiles > li {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        box-shadow: 0 0 0 1ex transparent;
+        padding: 0.5ex;
+        align-items: center;
+        font-size: 0.9em;
+    }
+    #profiles > li:hover {
+        color: HighlightText;
+        background-color: Highlight;
+        box-shadow: 0 0 0.5ex Highlight;
+    }
+    #profiles > li > img {
+        min-width: 16px;
+        min-height: 16px;
+        width: 16px;
+        height: 16px;
+        max-width: 16px;
+        max-height: 16px;
+        margin-right: 0.5ex;
+    }
+</style>
+</html>
